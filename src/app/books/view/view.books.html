@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="book" *ngFor="let book of books; let i = index" [class.pull-right]="i > 0">
+    <p>{{book.name}}</p>
+    <p>{{book.author}}</p>
+    <p>{{book.type}}</p>
+  </div>
+</div>

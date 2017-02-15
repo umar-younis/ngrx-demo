@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: #FEFEFE;
+}
+
+.main-div{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  nav{
+    position: relative;
+    background: #aaa;
+    border-bottom: 1px solid #aaa;
+    a{
+      text-decoration: none;
+      color: #000;
+      line-height: 50px;
+      div{
+        position: relative;
+        width: inherit;
+        height: 50px;
+        display: inline-block;
+        padding: 3px 20px 3px 20px;
+        text-align: center;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif; 
+      }
+      div:hover{
+        background: #ccc;
+      }
+      .active{
+        background: #ccc;
+      }
+    }
+  }
+  .container{
+    padding-top: 20px;
+    .book{
+      position: relative;
+      width: 200px;
+      height: 240px;
+      border-radius: 3px;
+      background: #fff;
+      display: inline-block;
+      box-shadow: 1px 1px 1.5px 1.5px #CECECE;
+      cursor: pointer;
+      p{
+        text-align: center;
+        line-height: 80px;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+    }
+    .book:hover{
+      opacity: 0.6;
+    }
+    .pull-right{
+      margin-left: 20px;
+    }
+  }
+}
+
+.book-form{
+  position: relative;
+  width: 500px;
+  background: #fff;
+  border-radius: 3px;
+  margin: auto;
+  .input-holder{
+    position: relative;
+    padding: 10px 0px;
+    input[type=text]{
+      width: 100%;
+      height: 30px;
+      padding: 3px 3px;
+      font-size: 16px;
+      border-radius: 1px;
+      border: 1px solid #aaa;
+    }
+    input[type=submit]{
+      width: 50%;
+      padding: 15px 0px;
+      font-size: 16px;
+      height: 50px;
+    }
+  }
+}
