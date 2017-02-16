@@ -1,4 +1,5 @@
 import { ActionReducer, Action } from "@ngrx/store";
+import { Database } from "@ngrx/db";
 
 export const ADD_BOOK = "ADD_BOOK";
 export const REMOVE_BOOK = "REMOVE_BOOK";

@@ -1,8 +1,8 @@
   <nav>
-    <a [routerLink]="['addBook']">
+    <a (click)="navigate(['/addBook'])">
       <div>Add Book</div>
     </a>
-    <a [routerLink]="['']">
+    <a (click)="navigate(['/'])">
       <div>View Books</div>
     </a>
   </nav>
