@@ -8,7 +8,7 @@ import { HttpModule } from '@angular/http';
 import { StoreModule } from '@ngrx/store';
 import { DBModule } from '@ngrx/db';
 import { routerReducer, RouterStoreModule } from '@ngrx/router-store';
-import { NOTIFY_PROVIDERS, NOTIFY_GLOBAL_OPTIONS } from '@ngrx/notify';
+// import { NOTIFY_PROVIDERS, NOTIFY_GLOBAL_OPTIONS } from '@ngrx/notify';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { AppComponent } from './app.component';
@@ -50,9 +50,7 @@ import { booksReducer, CustomRouter } from "./reducers";
     })
   ],
   providers: [
-    CustomRouter,
-    NOTIFY_PROVIDERS,
-    { provide: NOTIFY_GLOBAL_OPTIONS, multi: true, useValue: { /* global options here */ } }
+    CustomRouter
   ],
   bootstrap: [AppComponent]
 })
