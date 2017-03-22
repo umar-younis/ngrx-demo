@@ -18,8 +18,9 @@ import { ViewBooksComponent } from './books/view/view.books';
 import { BookComponent } from './books/book/book.component';
 import { BehaviorSubjectComponent } from './subjects/behavior-subject.component';
 import { SubjectComponent } from './subjects/subject.component';
-
-import { booksReducer, CustomRouter } from "./reducers";
+import { MdlModule } from "angular2-mdl";
+import { AppService } from "./app.service";
+import { booksReducer, CustomRouter, categoryReducer } from "./reducers";
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { booksReducer, CustomRouter } from "./reducers";
     FormsModule,
     HttpModule,
     DBModule,
+    MdlModule,
     RouterModule.forRoot([
       { path: '', component: ViewBooksComponent },
       { path: 'addBook', component: AddBookComponent },
@@ -43,14 +45,15 @@ import { booksReducer, CustomRouter } from "./reducers";
       { path: 'subject', component: SubjectComponent },
       { path: 'behaviorsubject', component: BehaviorSubjectComponent },
     ]),
-    StoreModule.provideStore({ books: booksReducer, router: routerReducer }),
+    StoreModule.provideStore({ books: booksReducer, router: routerReducer, category: categoryReducer }),
     RouterStoreModule.connectRouter(),
     StoreDevtoolsModule.instrumentOnlyWithExtension({
       maxAge: 5
     })
   ],
   providers: [
-    CustomRouter
+    CustomRouter,
+    AppService
   ],
   bootstrap: [AppComponent]
 })
